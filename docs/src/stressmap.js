@@ -3,7 +3,7 @@ const settings = [{ color: '#0099cc', weight: 3, key: 'LTS1', zIndex: 1, title: 
                 { color: '#1C7C54', weight: 3, key: 'LTS2', zIndex: 2, title: 'LTS 2 - Basso Stress', url: 'data/level_2.json' },
                 { color: '#F0C808', weight: 3, key: 'LTS3', zIndex: 3, title: 'LTS 3 - Stress Moderato', url: 'data/level_3.json' },
                 { color: '#DD5454', weight: 3, key: 'LTS4', zIndex: 4, title: 'LTS 4 - Stress Alto', url: 'data/level_4.json' }]
-const homePage = 'https://bikeottawa.ca/index.php/advocacy/advocacy-news/213-data_group'
+const homePage = 'https://github.com/napo/trentocyclestressmap/'
 const legendTitle = 'Livello di stress da traffico in bicicletta - Trento'
 const layers = {}
 const tree = rbush.rbush();
