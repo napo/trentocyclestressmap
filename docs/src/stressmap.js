@@ -1,4 +1,11 @@
+var boundary = [
+    [46.17792864897331, 11.562767028808594],
+    [45.959264977507075, 10.683860778808594]
+];
+
 const map = L.map('mapid').setView([46.0686, 11.1234], 15)
+map.setMaxBounds(boundary);
+var hash = new L.Hash(map);
 const settings = [{ color: '#0099cc', weight: 3, key: 'LTS1', zIndex: 1, title: 'LTS 1 - Adatto ai bambini', url: 'data/level_1.json' },
                 { color: '#1C7C54', weight: 3, key: 'LTS2', zIndex: 2, title: 'LTS 2 - Basso Stress', url: 'data/level_2.json' },
                 { color: '#F0C808', weight: 3, key: 'LTS3', zIndex: 3, title: 'LTS 3 - Stress Moderato', url: 'data/level_3.json' },
@@ -119,6 +126,16 @@ function addLegendLine (setting) {
 function addIconLayers(){
 
   const providers = [];
+  
+
+  providers.push({
+      title: 'OpenStreetMap',
+      icon: 'img/icons-carto.png',
+      layer: L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: 'Map tiles by [[http://cartodb.com/attributions#basemaps|CartoDB]], under [[https://creativecommons.org/licenses/by/3.0/|CC BY 3.0]]. Data by [[http://www.openstreetmap.org/|OpenStreetMap]], under ODbL.'
+      })
+  });  
   providers.push({
       title: 'OpenStreetMap',
       icon: 'img/icons-mapnik.png',
