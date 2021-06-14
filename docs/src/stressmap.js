@@ -128,15 +128,6 @@ function addIconLayers(){
   const providers = [];
   
   providers.push({
-      title: 'JawgMaps',
-      icon: 'img/icons-streets.png',
-      layer: L.tileLayer('https://tile.jawg.io/{z}/{x}/{y}.png?api-key=community', {
-          attribution: "&copy; OpenStreetMap JawgMaps",
-          maxZoom: 18
-      })
-  });
-  
-  providers.push({
       title: 'OpenStreetMap',
       icon: 'img/icons-carto.png',
       layer: L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
